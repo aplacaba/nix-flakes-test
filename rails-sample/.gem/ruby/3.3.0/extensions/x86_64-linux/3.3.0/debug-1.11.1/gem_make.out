@@ -1,0 +1,19 @@
+current directory: /home/allanl/Projects/flakes/rails-sample/.gem/ruby/3.3.0/gems/debug-1.11.1/ext/debug
+/nix/store/x5y7r23d2j2g0rq7dqfvka9zqc3qfhz8-ruby-3.3.10/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /home/allanl/Projects/flakes/rails-sample/.gem/ruby/3.3.0/gems/debug-1.11.1/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20260104-60383-2biyef sitelibdir\=./.gem.20260104-60383-2biyef clean
+
+current directory: /home/allanl/Projects/flakes/rails-sample/.gem/ruby/3.3.0/gems/debug-1.11.1/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20260104-60383-2biyef sitelibdir\=./.gem.20260104-60383-2biyef
+compiling debug.c
+compiling iseq_collector.c
+linking shared-object debug/debug.so
+
+current directory: /home/allanl/Projects/flakes/rails-sample/.gem/ruby/3.3.0/gems/debug-1.11.1/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20260104-60383-2biyef sitelibdir\=./.gem.20260104-60383-2biyef install
+install -c -p -m 755 debug.so ./.gem.20260104-60383-2biyef/debug
+
+current directory: /home/allanl/Projects/flakes/rails-sample/.gem/ruby/3.3.0/gems/debug-1.11.1/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20260104-60383-2biyef sitelibdir\=./.gem.20260104-60383-2biyef clean

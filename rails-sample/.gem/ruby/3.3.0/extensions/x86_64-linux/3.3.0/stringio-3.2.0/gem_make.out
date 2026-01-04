@@ -1,0 +1,19 @@
+current directory: /home/allanl/Projects/flakes/rails-sample/.gem/ruby/3.3.0/gems/stringio-3.2.0/ext/stringio
+/nix/store/x5y7r23d2j2g0rq7dqfvka9zqc3qfhz8-ruby-3.3.10/bin/ruby extconf.rb
+checking for rb_io_mode_t in ruby/io.h... no
+creating Makefile
+
+current directory: /home/allanl/Projects/flakes/rails-sample/.gem/ruby/3.3.0/gems/stringio-3.2.0/ext/stringio
+make DESTDIR\= sitearchdir\=./.gem.20260104-60383-rf0ota sitelibdir\=./.gem.20260104-60383-rf0ota clean
+
+current directory: /home/allanl/Projects/flakes/rails-sample/.gem/ruby/3.3.0/gems/stringio-3.2.0/ext/stringio
+make DESTDIR\= sitearchdir\=./.gem.20260104-60383-rf0ota sitelibdir\=./.gem.20260104-60383-rf0ota
+compiling stringio.c
+linking shared-object stringio.so
+
+current directory: /home/allanl/Projects/flakes/rails-sample/.gem/ruby/3.3.0/gems/stringio-3.2.0/ext/stringio
+make DESTDIR\= sitearchdir\=./.gem.20260104-60383-rf0ota sitelibdir\=./.gem.20260104-60383-rf0ota install
+install -c -p -m 755 stringio.so ./.gem.20260104-60383-rf0ota
+
+current directory: /home/allanl/Projects/flakes/rails-sample/.gem/ruby/3.3.0/gems/stringio-3.2.0/ext/stringio
+make DESTDIR\= sitearchdir\=./.gem.20260104-60383-rf0ota sitelibdir\=./.gem.20260104-60383-rf0ota clean

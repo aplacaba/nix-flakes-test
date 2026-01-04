@@ -1,0 +1,19 @@
+current directory: /home/allanl/Projects/flakes/t/.gem/ruby/4.0.0/gems/erb-6.0.1/ext/erb/escape
+/nix/store/dklnkgb3k5r2hgz190b9y9hcx33sbn5h-ruby-4.0.0/bin/ruby extconf.rb
+checking for rb_ext_ractor_safe() in ruby.h... yes
+creating Makefile
+
+current directory: /home/allanl/Projects/flakes/t/.gem/ruby/4.0.0/gems/erb-6.0.1/ext/erb/escape
+make -j3 DESTDIR\= sitearchdir\=./.gem.20260104-85057-fm6u22 sitelibdir\=./.gem.20260104-85057-fm6u22 clean
+
+current directory: /home/allanl/Projects/flakes/t/.gem/ruby/4.0.0/gems/erb-6.0.1/ext/erb/escape
+make -j3 DESTDIR\= sitearchdir\=./.gem.20260104-85057-fm6u22 sitelibdir\=./.gem.20260104-85057-fm6u22
+compiling escape.c
+linking shared-object erb/escape.so
+
+current directory: /home/allanl/Projects/flakes/t/.gem/ruby/4.0.0/gems/erb-6.0.1/ext/erb/escape
+make -j3 DESTDIR\= sitearchdir\=./.gem.20260104-85057-fm6u22 sitelibdir\=./.gem.20260104-85057-fm6u22 install
+install -c -p -m 755 escape.so ./.gem.20260104-85057-fm6u22/erb
+
+current directory: /home/allanl/Projects/flakes/t/.gem/ruby/4.0.0/gems/erb-6.0.1/ext/erb/escape
+make DESTDIR\= sitearchdir\=./.gem.20260104-85057-fm6u22 sitelibdir\=./.gem.20260104-85057-fm6u22 clean

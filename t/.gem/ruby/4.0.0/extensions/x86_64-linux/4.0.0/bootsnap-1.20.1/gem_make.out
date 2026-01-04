@@ -1,0 +1,23 @@
+current directory: /home/allanl/Projects/flakes/t/.gem/ruby/4.0.0/gems/bootsnap-1.20.1/ext/bootsnap
+/nix/store/dklnkgb3k5r2hgz190b9y9hcx33sbn5h-ruby-4.0.0/bin/ruby extconf.rb
+checking for fdatasync() in unistd.h... yes
+checking for fstatat() in sys/stat.h... yes
+checking for whether -D_GNU_SOURCE is accepted as CPPFLAGS... yes
+checking for whether -O3 is accepted as CFLAGS... yes
+checking for whether -std=c99 is accepted as CFLAGS... yes
+creating Makefile
+
+current directory: /home/allanl/Projects/flakes/t/.gem/ruby/4.0.0/gems/bootsnap-1.20.1/ext/bootsnap
+make -j3 DESTDIR\= sitearchdir\=./.gem.20260104-85057-s0zzwz sitelibdir\=./.gem.20260104-85057-s0zzwz clean
+
+current directory: /home/allanl/Projects/flakes/t/.gem/ruby/4.0.0/gems/bootsnap-1.20.1/ext/bootsnap
+make -j3 DESTDIR\= sitearchdir\=./.gem.20260104-85057-s0zzwz sitelibdir\=./.gem.20260104-85057-s0zzwz
+compiling bootsnap.c
+linking shared-object bootsnap/bootsnap.so
+
+current directory: /home/allanl/Projects/flakes/t/.gem/ruby/4.0.0/gems/bootsnap-1.20.1/ext/bootsnap
+make -j3 DESTDIR\= sitearchdir\=./.gem.20260104-85057-s0zzwz sitelibdir\=./.gem.20260104-85057-s0zzwz install
+install -c -p -m 755 bootsnap.so ./.gem.20260104-85057-s0zzwz/bootsnap
+
+current directory: /home/allanl/Projects/flakes/t/.gem/ruby/4.0.0/gems/bootsnap-1.20.1/ext/bootsnap
+make DESTDIR\= sitearchdir\=./.gem.20260104-85057-s0zzwz sitelibdir\=./.gem.20260104-85057-s0zzwz clean

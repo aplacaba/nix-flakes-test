@@ -1,0 +1,19 @@
+current directory: /home/allanl/Projects/flakes/t/.gem/ruby/4.0.0/gems/stringio-3.2.0/ext/stringio
+/nix/store/dklnkgb3k5r2hgz190b9y9hcx33sbn5h-ruby-4.0.0/bin/ruby extconf.rb
+checking for rb_io_mode_t in ruby/io.h... yes
+creating Makefile
+
+current directory: /home/allanl/Projects/flakes/t/.gem/ruby/4.0.0/gems/stringio-3.2.0/ext/stringio
+make -j3 DESTDIR\= sitearchdir\=./.gem.20260104-85057-1n2dj1 sitelibdir\=./.gem.20260104-85057-1n2dj1 clean
+
+current directory: /home/allanl/Projects/flakes/t/.gem/ruby/4.0.0/gems/stringio-3.2.0/ext/stringio
+make -j3 DESTDIR\= sitearchdir\=./.gem.20260104-85057-1n2dj1 sitelibdir\=./.gem.20260104-85057-1n2dj1
+compiling stringio.c
+linking shared-object stringio.so
+
+current directory: /home/allanl/Projects/flakes/t/.gem/ruby/4.0.0/gems/stringio-3.2.0/ext/stringio
+make -j3 DESTDIR\= sitearchdir\=./.gem.20260104-85057-1n2dj1 sitelibdir\=./.gem.20260104-85057-1n2dj1 install
+install -c -p -m 755 stringio.so ./.gem.20260104-85057-1n2dj1
+
+current directory: /home/allanl/Projects/flakes/t/.gem/ruby/4.0.0/gems/stringio-3.2.0/ext/stringio
+make DESTDIR\= sitearchdir\=./.gem.20260104-85057-1n2dj1 sitelibdir\=./.gem.20260104-85057-1n2dj1 clean

@@ -32,14 +32,14 @@
             rustc
             fish
           ];
+
           nativeBuildInputs = [ pkgs.pkg-config ];
 
-        };
-        env = {
-          SHELL = "${pkgs.fish}/bin/fish";
-        };
+          env = {
+            SHELL = "${pkgs.fish}/bin/fish";
+          };
 
-        shellHook = ''
+          shellHook = ''
           exec fish -C '
             # Set local gem directory
             set -gx GEM_HOME $PWD/.gem;
@@ -62,6 +62,7 @@
             echo "Rails version: $(rails --version)"
           '
         '';
+        };
       }
     );
 }

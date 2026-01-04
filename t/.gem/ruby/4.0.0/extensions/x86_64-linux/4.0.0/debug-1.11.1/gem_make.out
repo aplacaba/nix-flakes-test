@@ -1,0 +1,19 @@
+current directory: /home/allanl/Projects/flakes/t/.gem/ruby/4.0.0/gems/debug-1.11.1/ext/debug
+/nix/store/dklnkgb3k5r2hgz190b9y9hcx33sbn5h-ruby-4.0.0/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /home/allanl/Projects/flakes/t/.gem/ruby/4.0.0/gems/debug-1.11.1/ext/debug
+make -j3 DESTDIR\= sitearchdir\=./.gem.20260104-87892-9dzmbp sitelibdir\=./.gem.20260104-87892-9dzmbp clean
+
+current directory: /home/allanl/Projects/flakes/t/.gem/ruby/4.0.0/gems/debug-1.11.1/ext/debug
+make -j3 DESTDIR\= sitearchdir\=./.gem.20260104-87892-9dzmbp sitelibdir\=./.gem.20260104-87892-9dzmbp
+compiling debug.c
+compiling iseq_collector.c
+linking shared-object debug/debug.so
+
+current directory: /home/allanl/Projects/flakes/t/.gem/ruby/4.0.0/gems/debug-1.11.1/ext/debug
+make -j3 DESTDIR\= sitearchdir\=./.gem.20260104-87892-9dzmbp sitelibdir\=./.gem.20260104-87892-9dzmbp install
+install -c -p -m 755 debug.so ./.gem.20260104-87892-9dzmbp/debug
+
+current directory: /home/allanl/Projects/flakes/t/.gem/ruby/4.0.0/gems/debug-1.11.1/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20260104-87892-9dzmbp sitelibdir\=./.gem.20260104-87892-9dzmbp clean
