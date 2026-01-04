@@ -19,7 +19,7 @@ Gem::Specification.new do |s|
   s.rubygems_version = "3.6.9".freeze
   s.summary = "Rendering framework putting the V in MVC (part of Rails).".freeze
 
-  s.installed_by_version = "3.7.2".freeze
+  s.installed_by_version = "4.0.3".freeze
 
   s.specification_version = 4
 

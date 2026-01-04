@@ -18,7 +18,7 @@ Gem::Specification.new do |s|
   s.rubygems_version = "3.0.3".freeze
   s.summary = "CSS parser based on the CSS Syntax Level 3 spec.".freeze
 
-  s.installed_by_version = "3.7.2".freeze
+  s.installed_by_version = "4.0.3".freeze
 
   s.specification_version = 4
 

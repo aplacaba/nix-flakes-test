@@ -18,5 +18,5 @@ Gem::Specification.new do |s|
   s.rubygems_version = "3.4.19".freeze
   s.summary = "Efficient and thread-safe constant autoloader".freeze
 
-  s.installed_by_version = "3.7.2".freeze
+  s.installed_by_version = "4.0.3".freeze
 end

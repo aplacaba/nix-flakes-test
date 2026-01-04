@@ -1,6 +1,6 @@
 U:RDoc::NormalClass[iI"	Base:ETI"ActionController::Base;TI"
-Metal;To:RDoc::Markup::Document:@parts[o;;[4S:RDoc::Markup::Heading:
-leveli:	textI"Action Controller Base;To:RDoc::Markup::Paragraph;[I"TAction Controllers are the core of a web request in Rails. They are made up of
+Metal;To:RDoc::Markup::Document:@parts[o;;[4o:RDoc::Markup::Heading:@leveli:
+@textI"Action Controller Base;To:RDoc::Markup::Paragraph;[I"TAction Controllers are the core of a web request in Rails. They are made up of
 one or more actions that are executed on request and then either it renders a
 template or redirects to another action. An action is defined as a public
 method on the controller, which will automatically be made accessible to the
@@ -26,7 +26,7 @@ its main purpose (creating a new post), it initiates a redirect instead. This
 redirect works by returning an external <code>302 Moved</code> HTTP response that takes
 the user to the index action.;To;;[I"¶These two methods represent the two basic action archetypes used in Action
 Controllers: Get-and-show and do-and-redirect. Most actions are variations on
-these themes.;TS;	;
+these themes.;To;	;
 i;I"Requests;To;;[I"tFor every request, the router determines the value of the <code>controller</code> and
 <code>action</code> keys. These determine which controller and action are called. The
 remaining request parameters, the session (if one is available), and the full
@@ -36,7 +36,7 @@ used to query for HTTP headers:;To;;[	I"def server_ip
 ;TI"-  location = request.env["REMOTE_ADDR"]
 ;TI"9  render plain: "This server hosted at #{location}"
 ;TI"	end
-;T;0S;	;
+;T;0o;	;
 i;I"Parameters;To;;[I"vAll request parameters, whether they come from a query string in the URL or
 form data submitted through a POST request are available through the <code>params</code>
 method which returns a hash. For example, an action that was performed through
@@ -48,7 +48,7 @@ specifying keys using brackets, such as:;To;;[I"9<input type="text" name="
 "name" => "david", "address" => "hyacintvej" } }</code>. If the address input had
 been named <code>post[address][street]</code>, the <code>params</code> would have included <code>{ "post"
 => { "address" => { "street" => "hyacintvej" } } }</code>. There's no limit to the
-depth of the nesting.;TS;	;
+depth of the nesting.;To;	;
 i;I"Sessions;To;;[I"Sessions allow you to store objects in between requests. This is useful for
 objects that are not yet ready to be persisted, such as a Signup object
 constructed in a multi-paged process, or objects that don't change much and
@@ -65,11 +65,11 @@ accesses a hash:;To;;[I"Asession[:person] = Person.authenticate(user_name,
 ActionDispatch::Session::CookieStore). Thus the user will not be able to read
 or edit the session data. However, the user can keep a copy of the cookie even
 after it has expired, so you should avoid storing sensitive information in
-cookie-based sessions.;TS;	;
+cookie-based sessions.;To;	;
 i;I"Responses;To;;[I"ÎEach action results in a response, which holds the headers and document to be
 sent to the user's browser. The actual response object is generated
 automatically through the use of renders and redirects and requires no user
-intervention.;TS;	;
+intervention.;To;	;
 i;I"Renders;To;;[I"OAction Controller sends content to the user by using one of five rendering
 methods. The most versatile and common is the rendering of a template.
 Also included with \Rails is Action View, which enables rendering of ERB
@@ -88,7 +88,7 @@ rendering methods:;To;;[I"def search
 ;TI"4    when 2..10 then render action: "show_many"
 ;TI"  end
 ;TI"	end
-;T;0o;;[I"KRead more about writing ERB and Builder templates in ActionView::Base.;TS;	;
+;T;0o;;[I"KRead more about writing ERB and Builder templates in ActionView::Base.;To;	;
 i;I"Redirects;To;;[I"íRedirects are used to move from one action to another. For example, after a
 <code>create</code> action, which stores a blog entry to the database, we might like to
 show the user the new entry. Because we're following good DRY principles
@@ -108,7 +108,7 @@ redirected to the <code>show</code> method, which is then executed. Note that th
 external HTTP-level redirection which will cause the browser to make a second
 request (a GET to the show action), and not some internal re-routing which
 calls both "create" and then "show" within one request.;To;;[I"jLearn more about <code>redirect_to</code> and what options you have in
-ActionController::Redirecting.;TS;	;
+ActionController::Redirecting.;To;	;
 i;I"*Calling multiple redirects or renders;To;;[I"ÇAn action may perform only a single render or a single redirect. Attempting to
 do either again will result in a DoubleRenderError:;To;;[	I"def do_something
 ;TI"'  redirect_to action: "elsewhere"

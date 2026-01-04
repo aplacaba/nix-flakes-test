@@ -23,7 +23,7 @@ Gem::Specification.new do |s|
   s.rubygems_version = "4.0.3".freeze
   s.summary = "Nokogiri (\u92F8) makes it easy and painless to work with XML and HTML from Ruby.".freeze
 
-  s.installed_by_version = "3.7.2".freeze
+  s.installed_by_version = "4.0.3".freeze
 
   s.specification_version = 4
 

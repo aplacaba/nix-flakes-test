@@ -17,7 +17,7 @@ Gem::Specification.new do |s|
   s.rubygems_version = "3.6.7".freeze
   s.summary = "Dom and Selector assertions for Rails applications".freeze
 
-  s.installed_by_version = "3.7.2".freeze
+  s.installed_by_version = "4.0.3".freeze
 
   s.specification_version = 4
 

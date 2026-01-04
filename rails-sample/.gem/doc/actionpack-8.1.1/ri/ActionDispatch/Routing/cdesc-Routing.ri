@@ -11,8 +11,8 @@ I"&Rails.application.routes.draw do
 ;T:@format0o;	;[I"'The following symbols are special:;To;
 ;[I".:controller maps to your controller name
 ;TI"9:action     maps to an action with your controllers
-;T;0o;	;[I"NOther names simply map to a parameter as in the case of <code>:id</code>.;TS:RDoc::Markup::Heading:
-leveli:	textI"Resources;To;	;[I"mResource routing allows you to quickly declare all of the common routes for a
+;T;0o;	;[I"NOther names simply map to a parameter as in the case of <code>:id</code>.;To:RDoc::Markup::Heading:@leveli:
+@textI"Resources;To;	;[I"mResource routing allows you to quickly declare all of the common routes for a
 given resourceful controller. Instead of declaring separate routes for your
 <code>index</code>, <code>show</code>, <code>new</code>, <code>edit</code>, <code>create</code>, <code>update</code>, and <code>destroy</code> actions, a
 resourceful route declares them in a single line of code:;To;
@@ -41,7 +41,7 @@ all enclosed routes.;To;
 ;TI"#  resources :posts, :comments
 ;TI"	end
 ;T;0o;	;[I"{For more, see Routing::Mapper::Resources#resources,
-Routing::Mapper::Scoping#namespace, and Routing::Mapper::Scoping#scope.;TS;;i;I"Non-resourceful routes;To;	;[I"¡For routes that don't fit the <code>resources</code> mold, you can use the HTTP helper
+Routing::Mapper::Scoping#namespace, and Routing::Mapper::Scoping#scope.;To;;i;I"Non-resourceful routes;To;	;[I"¡For routes that don't fit the <code>resources</code> mold, you can use the HTTP helper
 methods <code>get</code>, <code>post</code>, <code>patch</code>, <code>put</code> and <code>delete</code>.;To;
 ;[I"&get 'post/:id', to: 'posts#show'
 ;TI"1post 'post/:id', to: 'posts#create_comment'
@@ -49,7 +49,7 @@ methods <code>get</code>, <code>post</code>, <code>patch</code>, <code>put</code
 action. A GET on the same URL will route to the <code>show</code> action.;To;	;[I"ôIf your route needs to respond to more than one HTTP method (or all methods)
 then using the <code>:via</code> option on <code>match</code> is preferable.;To;
 ;[I"<match 'post/:id', to: 'posts#show', via: [:get, :post]
-;T;0S;;i;I"Named routes;To;	;[I"“Routes can be named by passing an <code>:as</code> option, allowing for easy reference
+;T;0o;;i;I"Named routes;To;	;[I"“Routes can be named by passing an <code>:as</code> option, allowing for easy reference
 within your source as <code>name_of_route_url</code> for the full URL and
 <code>name_of_route_path</code> for the URI path.;To;	;[I"Example:;To;
 ;[
@@ -78,7 +78,7 @@ call on the block parameter rather than map.;To;
 ;TI"	end
 ;T@kI"8# provides named routes for show, delete, and edit
 ;TI"=link_to @article.title, blog_show_path(id: @article.id)
-;T;0S;;i;I"Pretty URLs;To;	;[I"2Routes can generate pretty URLs. For example:;To;
+;T;0o;;i;I"Pretty URLs;To;	;[I"2Routes can generate pretty URLs. For example:;To;
 ;[
 I"Rget '/articles/:year/:month/:day', to: 'articles#find_by_id', constraints: {
 ;TI"  year:       /\d{4}/,
@@ -88,7 +88,7 @@ I"Rget '/articles/:year/:month/:day', to: 'articles#find_by_id', constraints: {
 ;T;0o;	;[I"WUsing the route above, the URL "http://localhost:3000/articles/2005/11/06"
 maps to;To;
 ;[I"5params = {year: '2005', month: '11', day: '06'}
-;T;0S;;i;I"'Regular Expressions and parameters;To;	;[I"MYou can specify a regular expression to define a format for a parameter.;To;
+;T;0o;;i;I"'Regular Expressions and parameters;To;	;[I"MYou can specify a regular expression to define a format for a parameter.;To;
 ;[
 I"controller 'geocode' do
 ;TI"<  get 'geocode/:postalcode', to: :show, constraints: {
@@ -112,25 +112,25 @@ expression modifiers:;To;
 ;TI"	end
 ;T;0o;	;[I"ªUsing the multiline modifier will raise an <code>ArgumentError</code>. Encoding regular
 expression modifiers are silently ignored. The match will always use the
-default encoding or ASCII.;TS;;i;I"External redirects;To;	;[I"XYou can redirect any path to another path using the redirect helper in your
+default encoding or ASCII.;To;;i;I"External redirects;To;	;[I"XYou can redirect any path to another path using the redirect helper in your
 router:;To;
 ;[I",get "/stories", to: redirect("/posts")
-;T;0S;;i;I"Unicode character routes;To;	;[I"=You can specify unicode character routes in your router:;To;
+;T;0o;;i;I"Unicode character routes;To;	;[I"=You can specify unicode character routes in your router:;To;
 ;[I"0get "„Åì„Çì„Å´„Å°„ÅØ", to: "welcome#index"
-;T;0S;;i;I"!Routing to Rack Applications;To;	;[I"µInstead of a String, like <code>posts#index</code>, which corresponds to the index action
+;T;0o;;i;I"!Routing to Rack Applications;To;	;[I"µInstead of a String, like <code>posts#index</code>, which corresponds to the index action
 in the PostsController, you can specify any Rack application as the endpoint
 for a matcher:;To;
 ;[I"*get "/application.js", to: Sprockets
-;T;0S;;i;I"Reloading routes;To;	;[I"0You can reload routes if you feel you must:;To;
+;T;0o;;i;I"Reloading routes;To;	;[I"0You can reload routes if you feel you must:;To;
 ;[I"&Rails.application.reload_routes!
 ;T;0o;	;[I"£This will clear all named routes and reload config/routes.rb if the file has
-been modified from last load. To absolutely force reloading, use <code>reload!</code>.;TS;;i;I"Testing Routes;To;	;[I"2The two main methods for testing your routes:;TS;;i;I" <code>assert_routing</code>;To;
+been modified from last load. To absolutely force reloading, use <code>reload!</code>.;To;;i;I"Testing Routes;To;	;[I"2The two main methods for testing your routes:;To;;i;I" <code>assert_routing</code>;To;
 ;[	I"*def test_movie_route_properly_splits
 ;TI"B  opts = {controller: "plugin", action: "checkout", id: "2"}
 ;TI"0  assert_routing "plugin/checkout/2", opts
 ;TI"	end
 ;T;0o;	;[I"g<code>assert_routing</code> lets you test whether or not the route properly resolves into
-options.;TS;;i;I"#<code>assert_recognizes</code>;To;
+options.;To;;i;I"#<code>assert_recognizes</code>;To;
 ;[	I" def test_route_has_options
 ;TI"?  opts = {controller: "plugin", action: "show", id: "12"}
 ;TI"2  assert_recognizes opts, "/plugins/show/12"
@@ -146,7 +146,7 @@ properly.;To;	;[I"bIn tests you can simply pass the URL or named route to <
 ;TI"  get login_url
 ;TI"  #...
 ;TI"	end
-;T;0S;;i;I"#View a list of all your routes;To;
+;T;0o;;i;I"#View a list of all your routes;To;
 ;[I"$ bin/rails routes
 ;T;0o;	;[I"≠Target a specific controller with <code>-c</code>, or grep routes using <code>-g</code>. Useful in
 conjunction with <code>--expanded</code> which displays routes vertically.;T:

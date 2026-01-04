@@ -18,7 +18,7 @@ Gem::Specification.new do |s|
   s.rubygems_version = "3.3.22".freeze
   s.summary = "This gem is responsible to sanitize HTML fragments in Rails applications.".freeze
 
-  s.installed_by_version = "3.7.2".freeze
+  s.installed_by_version = "4.0.3".freeze
 
   s.specification_version = 4
 

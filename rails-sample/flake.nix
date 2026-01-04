@@ -1,68 +1,51 @@
 {
-  description = "Ruby on Rails development setup";
-
-  inputs  = {
-    nixpkgs.url = "nixpkgs";
+  inputs = {
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.11";
+    nixpkgs-ruby.url = "github:bobvanderlinden/nixpkgs-ruby";
+    nixpkgs-ruby.inputs.nixpkgs.follows = "nixpkgs";
     flake-utils.url = "github:numtide/flake-utils";
   };
 
-  outputs = { self, nixpkgs, flake-utils }:
+  outputs = { self, nixpkgs, nixpkgs-ruby, flake-utils }:
     flake-utils.lib.eachDefaultSystem (system:
       let
-        # overlays = [
-        #   (self: super: {
-        #     ruby = pkgs.ruby_3_4;
-        #   })
-        # ];
+        pkgs = nixpkgs.legacyPackages.${system};
+        ruby = nixpkgs-ruby.lib.packageFromRubyVersionFile {
+          file = ./.ruby-version;
+          inherit system;
+        };
 
-        pkgs = import nixpkgs { inherit system; };
+        gems = pkgs.bundlerEnv {
+          name = "gemset";
+          inherit ruby;
+          gemfile = ./Gemfile;
+          lockfile = ./Gemfile.lock;
+          gemset = ./gemset.nix;
+          groups = [ "default" "production" "development" "test" ];
+        };
+      in
+      {
+        devShell = with pkgs;
+          mkShell {
+            buildInputs = [
+              # gems
+              ruby
+              bundix
+              pkg-config
+              zlib
+              openssl
+              libyaml
+              gmp
+              readline
+              rustc
+            ];
 
-      in {
-        devShells.default = pkgs.mkShell {
-          buildInputs = with pkgs; [
-            ruby
-            gcc
-            gnumake
-            pkg-config
-            zlib
-            openssl
-            libyaml
-            gmp
-            readline
-            rustc
-            fish
-          ];
-
-          nativeBuildInputs = [ pkgs.pkg-config ];
-
-          env = {
-            SHELL = "${pkgs.fish}/bin/fish";
+            shellHook = ''
+              export GEM_HOME=$PWD/.gem
+              export PATH=$PATH:$GEM_HOME/bin
+              bundle config set path $GEM_HOME
+            '';
           };
 
-          shellHook = ''
-          exec fish -C '
-            # Set local gem directory
-            set -gx GEM_HOME $PWD/.gem;
-            set -gx PATH $GEM_HOME/bin $PATH;
-
-            bundle config set path $GEM_HOME
-
-            if not type -q rails
-              echo "Rails not found. Installing rails..."
-              gem install rails
-            end
-
-            if not test -d "$GEM_HOME/gems"
-              echo "Installing Ruby gems..."
-              bundle install
-            end
-
-            # show versions
-            echo "Ruby version: $(ruby --version)"
-            echo "Rails version: $(rails --version)"
-          '
-        '';
-        };
-      }
-    );
+      });
 }
